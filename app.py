@@ -168,7 +168,7 @@ def nextpage():
         input_text = text
         return render_template('result.html')
 
-if __name__ == '__main__':
+if __name__ == '__app__':
     app.secret_key = 'super secret key'
     app.config['SESSION_TYPE'] = 'filesystem'
     app.run(debug=True)
