@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Readrr -Listen to your favorite Books</title>
+       <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body,h2 {font-family: "Amatic SC", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-color: #f1c40f;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+</head>
+
+    <body>
+	<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xxlarge">
+    <b>READRR
+  </div>
+  <div class="w3-display-middle">
+
+    <!--<h1 class=" w3-xxxlarge w3-animate-top">Listen to your favorite Books</h1>-->
+<h2 class="w3-text-white w3-hide-small w3-jumbo w3-animate-top"><b>Listen to your favorite Books<b></h2>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center"></p>
+
+<form action="{{ url_for('nextpage') }}" method="POST" enctype="multipart/form-data">
+               <input class="w3-animate-left w3-button w3-black w3-round w3-padding-large w3-opacity  w3-hover-white w3-large" style="margin-left: 28%" type="file" name="file"><br><br><br><br><br>
+        	        	<input type="submit" class="w3-animate-zoom w3-button w3-black w3-round w3-padding-large w3-opacity  w3-hover-white w3-large" style="margin-left: 40%" value="LISTEN">
+        	
+</form>
+  </div>
+
+ <div class="w3-display-bottommiddle">
+   
+
+<form action="{{ url_for('nextpage') }}" method="POST" enctype="multipart/form-data">
+               
+        	        	
+        	
+</form>
+  </div>
+
+
+  <div class="w3-display-bottomleft w3-padding-large">
+    Copyright @amancreations</a>
+  </div>
+</div>
+    
+    </body>
+</html>

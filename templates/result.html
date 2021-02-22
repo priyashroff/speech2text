@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Readr</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles2.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style3.css') }}">
+		<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400"/>
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<script src="/static/script.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">		
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">	
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body,h2 {font-family: "Amatic SC", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('/w3images/forestbridge.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+</head>
+
+    <body>
+
+  <div class="w3-display-topleft w3-padding-large w3-xxlarge">
+    <b>READRR</b>
+  </div>
+
+ <div class="w3-display-middle">
+
+    <!--<h1 class=" w3-xxxlarge w3-animate-top">Listen to your favorite Books</h1>-->
+<h2 class="w3-text-black w3-hide-small w3-jumbo"><b>Read with Ears<b></h2>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">Listening to {{ filename }}</p>
+
+
+<form action="{{ url_for('listen') }}" method="POST">
+                <h1></h1>
+        	<input type="submit" class="w3-button w3-white w3-round w3-padding-large   w3-hover-blue w3-xlarge" style="margin-left: 28%" id="start" value="Start">
+		
+        	</form>
+		
+
+
+		<form action="{{ url_for('pause') }}" method="POST">
+                <h1></h1>
+		<input type="submit" class="w3-button w3-blue w3-round w3-padding-large   w3-hover-white w3-xlarge" style="margin-left: 28%" id="pause" value="pause" style="font-family: 'Roboto'; text-align: center; text-transform: uppercase; color: #FFF; user-select: none;">
+        	</form>
+
+<form action="{{ url_for('stop') }}" method="POST">
+                <h1></h1>
+     
+		<input type="submit" class="w3-button w3-black w3-round w3-padding-large w3-opacity  w3-hover-white w3-xlarge" style="margin-left: 28%" id="stop" value="Stop" style="font-family: 'Roboto'; text-align: center; text-transform: uppercase; color: #FFF; user-select: none;">
+        	</form>
+  </div>
+
+
+	
+		
+
+
+
+
+	<!-- Footer -->
+       <div class='footer'>
+       </div>
+
+	</body>
+</html>
