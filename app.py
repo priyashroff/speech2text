@@ -8,7 +8,6 @@ import multiprocessing
 import time
 from threading import Thread
 import threading
-import win32com.client as comclt
 import pyautogui
 
 app = Flask(__name__)
