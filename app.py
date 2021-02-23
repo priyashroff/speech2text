@@ -36,9 +36,9 @@ def listen():
         print ('text is' + text)
         print (input_text)
         seconds = time.time()
-
+	abc = "my name is abc and my name is def my name is aaaaa"
         # session['seconds'] = seconds
-        say(text)
+        say(abc)
         return render_template('result.html')
 
 all_processes = []
