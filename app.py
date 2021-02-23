@@ -92,11 +92,11 @@ def say(phrase):
 
         p.start()
         all_processes.append(p)
-        while p.is_alive():
-            if keyboard.is_pressed('q'):
-                p.terminate()
-            else:
-                continue
+        #while p.is_alive():
+            #if keyboard.is_pressed('q'):
+                #p.terminate()
+            #else:
+                #continue
         p.join()
     else:
         print("phras1e"+__name__)
