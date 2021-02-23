@@ -85,9 +85,9 @@ def sayFunc(phrase):
 
 
 def say(phrase):
-    if __name__ == '__main__':
+    if __name__ == 'app':
         p = multiprocessing.Process(target=sayFunc, args=(phrase,))
-
+        print("ph" )
         # p = threading.Thread(target=sayFunc, args=(phrase,))
 
         p.start()
