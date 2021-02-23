@@ -98,6 +98,8 @@ def say(phrase):
             else:
                 continue
         p.join()
+    else:
+        print("phrase"+phrase)
 
 
 @app.route('/pause', methods=['POST'])
