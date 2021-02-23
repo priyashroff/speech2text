@@ -74,7 +74,7 @@ def sayFunc(phrase):
 
     en_voice_id="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_hiIN_HemantM"
     print('vid',voices[0].id)
-    engine.setProperty('voice', en_voice_id)
+    engine.setProperty('voice', voices[0].id)
 
     engine.setProperty('rate', 150)
     rate = 2
