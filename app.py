@@ -38,8 +38,6 @@ def listen():
         seconds = time.time()
 
         # session['seconds'] = seconds
-
-        session['rate'] = 2
         say(text)
         return render_template('result.html')
 
