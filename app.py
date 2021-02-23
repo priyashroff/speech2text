@@ -99,7 +99,7 @@ def say(phrase):
                 continue
         p.join()
     else:
-        print("phrase"+phrase)
+        print("phras1e"+__name__)
 
 
 @app.route('/pause', methods=['POST'])
