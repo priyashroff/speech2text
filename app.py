@@ -33,13 +33,15 @@ def listen():
     global seconds
     global rate
     if request.method == 'POST':
-        print ('text is' + text)
-        print (input_text)
+        print('text is' + text)
+        print(input_text)
         seconds = time.time()
-	abc = "my name is abc and my name is def my name is aaaaa"
+
+        a = "my name is abc and my name is def my name is aaa"
         # session['seconds'] = seconds
-        say(abc)
+        say(a)
         return render_template('result.html')
+
 
 all_processes = []
 text = ''
@@ -50,42 +52,41 @@ seconds = 0
 
 def run():
     while True:
-        print ('thread running')
+        print('thread running')
         global stop_threads
         if stop_threads:
             break
 
 
 def sayFunc(phrase):
-
-        # global rate
-        # global seconds
+    # global rate
+    # global seconds
 
     engine = pyttsx3.init()
     voices = engine.getProperty('voices')
     voices = engine.getProperty('voices')
     for voice in voices:
-        print ('Voice:')
-        print (' - ID: %s' % voice.id)
-        print (' - Name: %s' % voice.name)
-        print (' - Languages: %s' % voice.languages)
-        print (' - Gender: %s' % voice.gender)
-        print (' - Age: %s' % voice.age)
+        print('Voice:')
+        print(' - ID: %s' % voice.id)
+        print(' - Name: %s' % voice.name)
+        print(' - Languages: %s' % voice.languages)
+        print(' - Gender: %s' % voice.gender)
+        print(' - Age: %s' % voice.age)
 
-    en_voice_id="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_hiIN_HemantM"
-    print('vid',voices[0].id)
+    en_voice_id = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_hiIN_HemantM"
+    print('vid', voices[0].id)
     engine.setProperty('voice', voices[0].id)
 
     engine.setProperty('rate', 150)
     rate = 2
     engine.say(phrase)
-    print ('gs', seconds)
+    print('gs', seconds)
     engine.runAndWait()
 
 
 def say(phrase):
     if __name__ == '__main__':
-        p = multiprocessing.Process(target=sayFunc, args=(phrase, ))
+        p = multiprocessing.Process(target=sayFunc, args=(phrase,))
 
         # p = threading.Thread(target=sayFunc, args=(phrase,))
 
@@ -105,23 +106,23 @@ def pause():
     global input_text
     global rate
     global seconds
-    print ('pp', seconds)
+    print('pp', seconds)
     for process in all_processes:
         process.terminate()
 
-    print ('time', time.time())
+    print('time', time.time())
     seconds = time.time() - seconds
 
     # print("sessionss11",session['seconds'])
     # print("sessionss",session.get('seconds'))
 
-    print ('ss', seconds)
-    print ('rate', rate)
+    print('ss', seconds)
+    print('rate', rate)
     session.pop('seconds', None)
-    word_count = int(seconds * 2.5)+2
-    print ('wc', word_count)
+    word_count = int(seconds * 2.5) + 2
+    print('wc', word_count)
     text = text[word_count:]
-    print ('pause ' + text)
+    print('pause ' + text)
 
     # say(text)
 
@@ -135,7 +136,7 @@ def stop():
     for process in all_processes:
         process.terminate()
     session.pop('seconds', None)
-    #print ('fikes', session['file'])
+    # print ('fikes', session['file'])
     text = input_text
     return render_template('result.html')
 
@@ -151,8 +152,8 @@ def nextpage():
     if request.method == 'POST':
         global text
         global input_text
-        #session['file'] = request.form['file']
-        print ('fileu', request.files['file'])
+        # session['file'] = request.form['file']
+        print('fileu', request.files['file'])
         f = request.files['file']
 
         # f = open(request.form['file'], encoding="utf8")
@@ -165,6 +166,7 @@ def nextpage():
         text = text.replace('\n', ' ')
         input_text = text
         return render_template('result.html')
+
 
 if __name__ == '__main__':
     app.secret_key = 'super secret key'
