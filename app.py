@@ -62,7 +62,7 @@ def sayFunc(phrase):
     # global rate
     # global seconds
 
-    engine = pyttsx3.init('dummy')
+    engine = pyttsx3.init()
     voices = engine.getProperty('voices')
     voices = engine.getProperty('voices')
     for voice in voices:
@@ -85,7 +85,7 @@ def sayFunc(phrase):
 
 
 def say(phrase):
-    if __name__ == 'app':
+    if __name__ == '__main__':
         p = multiprocessing.Process(target=sayFunc, args=(phrase,))
         print("ph" )
         # p = threading.Thread(target=sayFunc, args=(phrase,))
