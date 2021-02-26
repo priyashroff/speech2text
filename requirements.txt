@@ -11,4 +11,4 @@ pandas>=0.19
 pyttsx3==2.71
 keyboard>=0.13.5
 pyautogui>=0.9.52
-speake3>=0.3
+pyttsx3eaidk==2.91
