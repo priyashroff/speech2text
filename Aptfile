@@ -1,7 +1,4 @@
-libsm6
-libxrender1
-libfontconfig1
-libice6
-libespeak1
 espeak
 ffmpeg
+libespeak1
+
