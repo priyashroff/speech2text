@@ -3,7 +3,6 @@
 
 from flask import Flask, render_template, request, session
 import pyttsx3
-from pyttsx3.drivers import espeak
 import multiprocessing
 import time
 from threading import Thread
@@ -62,7 +61,7 @@ def sayFunc(phrase):
     # global rate
     # global seconds
 
-    engine = pyttsx3.init(espeak)
+    engine = pyttsx3.init('espeak')
     voices = engine.getProperty('voices')
     voices = engine.getProperty('voices')
     for voice in voices:
