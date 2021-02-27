@@ -9,3 +9,4 @@ scipy>=0.15.1
 scikit-learn>=0.18
 pandas>=0.19
 pyttsx3==2.71
+python-espeak==0.6.3
