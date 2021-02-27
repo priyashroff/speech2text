@@ -61,7 +61,7 @@ def sayFunc(phrase):
     # global rate
     # global seconds
 
-    engine = pyttsx3.init('nsss')
+    engine = pyttsx3.init('espeak')
     voices = engine.getProperty('voices')
     voices = engine.getProperty('voices')
     for voice in voices:
