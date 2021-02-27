@@ -8,5 +8,5 @@ numpy>=1.9.2
 scipy>=0.15.1
 scikit-learn>=0.18
 pandas>=0.19
-PyAudio==0.2.11
+PyAudio==0.2.9
 pyttsx3==2.71
