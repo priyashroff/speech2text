@@ -9,6 +9,7 @@ from threading import Thread
 import threading
 from gtts import gTTS 
 from IPython.display import Audio
+from playsound import playsound
 
 app = Flask(__name__)
 
@@ -63,9 +64,9 @@ def sayFunc(phrase):
     # global rate
     # global seconds
     tts = gTTS('my name is abc and my name is def my name is aaa', lang='en', tld='co.in')
-    tts.save("1.wav")
+    tts.save("1.mp3")
     sound = "1.wav"
-    Audio(sound, autoplay=True)
+    playsound("1.mp3")
     engine = pyttsx3.init('dummy')
     voices = engine.getProperty('voices')
     voices = engine.getProperty('voices')
@@ -89,7 +90,7 @@ def sayFunc(phrase):
 
 
 def say(phrase):
-    if __name__ == 'app':
+    if __name__ == '__main__':
         p = multiprocessing.Process(target=sayFunc, args=(phrase,))
         print("ph" )
         # p = threading.Thread(target=sayFunc, args=(phrase,))
