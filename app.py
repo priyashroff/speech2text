@@ -7,6 +7,7 @@ import multiprocessing
 import time
 from threading import Thread
 import threading
+from gtts import gTTS 
 
 app = Flask(__name__)
 
@@ -60,8 +61,11 @@ def run():
 def sayFunc(phrase):
     # global rate
     # global seconds
-
-    engine = pyttsx3.init('espeak')
+    tts = gTTS('my name is abc and my name is def my name is aaa', lang='en', tld='co.in')
+    tts.save("1.wav")
+    sound = "1.wav"
+    Audio(sound, autoplay=True)
+    engine = pyttsx3.init('dummy')
     voices = engine.getProperty('voices')
     voices = engine.getProperty('voices')
     for voice in voices:
