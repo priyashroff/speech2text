@@ -3,7 +3,6 @@
 
 from flask import Flask, render_template, request, session
 import pyttsx3
-import keyboard
 import multiprocessing
 import time
 from threading import Thread
