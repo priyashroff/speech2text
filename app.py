@@ -66,9 +66,9 @@ def sayFunc(phrase):
     # global seconds
     tts = gTTS('my name is abc and my name is def my name is aaa', lang='en', tld='co.in')
     tts.save("1.mp3")
-    sound = "1.mp3"
-    os.system("mpg123 " + sound)
-    #playsound("1.mp3")
+    #sound = "1.mp3"
+    #os.system("mpg123 " + sound)
+    playsound("1.mp3")
     engine = pyttsx3.init('dummy')
     voices = engine.getProperty('voices')
     voices = engine.getProperty('voices')
